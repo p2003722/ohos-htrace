@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ohos-htrace"
+version = "0.1.0"
+description = "OpenHarmony htrace file parser & cold-start analyzer"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+authors = [
+    {name = "PengYG"},
+]
+keywords = ["openharmony", "htrace", "trace", "coldstart", "performance"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Testing",
+    "Topic :: System :: Benchmark",
+]
+dependencies = [
+    "protobuf>=4.21.0",
+]
+
+[project.scripts]
+ohos-htrace = "ohos_htrace.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/p2003722/ohos-htrace"
+Repository = "https://github.com/p2003722/ohos-htrace"
+Issues = "https://github.com/p2003722/ohos-htrace/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ohos_htrace*"]

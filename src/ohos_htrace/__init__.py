@@ -1,7 +1,7 @@
 """
 ohos_htrace — OpenHarmony htrace file parser & cold-start analyzer
 """
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from .parser import HtraceParser
 from .db_builder import build_memory_db
